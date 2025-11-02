@@ -30,10 +30,12 @@ npm-debug.log*
 test-results/
 *.tgz
 
-# Package locks
-package-lock.json
+# Package locks (alternative package managers)
 yarn.lock
 pnpm-lock.yaml
 
-# NPM config
+# NPM config with auth token (use .npmrc.template instead)
 .npmrc
+
+# Note: package-lock.json is tracked for reproducible builds
+# Note: .npmrc.template is tracked (contains placeholder for token)
