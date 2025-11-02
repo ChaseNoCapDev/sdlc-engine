@@ -1,0 +1,3 @@
+[submodule "packages/sdlc-engine"]
+	path = packages/sdlc-engine
+	url = https://github.com/ChaseNoCap/sdlc-engine.git

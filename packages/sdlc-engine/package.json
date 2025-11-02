@@ -1,0 +1,64 @@
+{
+  "name": "@chasenocap/sdlc-engine",
+  "version": "1.0.0",
+  "description": "SDLC state machine engine for metaGOTHIC framework",
+  "keywords": [
+    "sdlc",
+    "state-machine",
+    "workflow",
+    "orchestration",
+    "metaGOTHIC"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist coverage",
+    "prepublishOnly": "npm run clean && npm run build && npm run test && npm run lint"
+  },
+  "dependencies": {
+    "@chasenocap/di-framework": "^1.0.0",
+    "@chasenocap/logger": "^1.0.0",
+    "@chasenocap/event-system": "^1.0.0",
+    "@chasenocap/sdlc-config": "^1.0.0",
+    "inversify": "^6.1.3",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.19.0",
+    "@typescript-eslint/parser": "^8.19.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.2",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaseNoCap/sdlc-engine.git"
+  },
+  "author": "ChaseNoCap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChaseNoCap/sdlc-engine/issues"
+  },
+  "homepage": "https://github.com/ChaseNoCap/sdlc-engine#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "tier": "core"
+}
